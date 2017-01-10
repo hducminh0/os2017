@@ -10,5 +10,5 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: Hoang Duc Minh
-* ID: USTHBI6-096
+* Name:Hoang Duc Minh
+* ID:USTHBI6-096
