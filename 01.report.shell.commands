@@ -1,0 +1,70 @@
+1. ~$ echo hello world
+hello world
+
+2. ~$ passwd
+Changing password for hducminh0.
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+
+3. ~$ date
+Thứ ba, 17 Tháng một năm 2017 00:55:31 ICT
+
+4. ~$ hostname
+LPU
+
+5. ~$ arch
+x86_64
+
+6. ~$ uname -a
+Linux LPU 4.4.0-57-generic #78-Ubuntu SMP Fri Dec 9 23:50:32 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+7. ~$ dmesg
+[    0.000000] microcode: CPU0 microcode updated early to revision 0x1c, date = 2015-02-26
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.4.0-57-generic (buildd@lgw01-54) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #78-Ubuntu SMP Fri Dec 9 23:50:32 UTC 2016 (Ubuntu 4.4.0-57.78-generic 4.4.35)
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.4.0-57-generic root=UUID=1ea46b07-5e67-407b-9866-77cc5380653e ro quiet splash vt.handoff=7
+[    0.000000] KERNEL supported cpus:
+
+8. ~$ uptime
+ 01:02:07 up 42 min,  1 user,  load average: 0,17, 0,20, 0,23
+
+9. ~$ who am i
+
+10. ~$ whoami
+hducminh0
+
+11. ~$ who
+hducminh0 tty7         2017-01-17 07:20 (:0)
+
+12. ~$ id
+uid=1000(hducminh0) gid=1000(hducminh0) groups=1000(hducminh0),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)
+
+13. ~$ last
+hducminh tty7         :0               Tue Jan 17 07:20    gone - no logout
+reboot   system boot  4.4.0-57-generic Tue Jan 17 07:19   still running
+hducminh tty7         :0               Tue Jan 10 20:34 - down   (-6:-51)
+reboot   system boot  4.4.0-57-generic Tue Jan 10 20:33 - 13:42  (-6:-51)
+reboot   system boot  4.4.0-57-generic Tue Jan 10 18:16 - 13:42  (-4:-33)
+hducminh tty7         :0               Tue Jan 10 12:30 - down   (00:08)
+reboot   system boot  4.4.0-57-generic Tue Jan 10 12:30 - 12:39  (00:09)
+hducminh tty7         :0               Tue Jan 10 18:45 - down   (-6:-46)
+reboot   system boot  4.4.0-57-generic Tue Jan 10 18:45 - 11:59  (-6:-46)
+
+14. ~$ finger
+Login      Name       Tty      Idle  Login Time   Office     Office Phone
+hducminh0  MinhLP     tty7           Jan 17 07:20 (:0)
+
+15. ~$ w
+ 01:06:57 up 47 min,  1 user,  load average: 0,02, 0,09, 0,16
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+hducminh tty7     :0               07:20     ?    52.09s  0.13s /sbin/upstart -
+
+
+
+
+
+
