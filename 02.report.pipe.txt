@@ -1,0 +1,22 @@
+1. ~$ ls | grep "list"
+list
+list (copy)
+
+2. /etc$ wc --lines passwd
+42 passwd
+
+3. ~$ free --total
+              total        used        free      shared  buff/cache   available
+Mem:        3917576     1208296     1344872      296368     1364408     2123288
+Swap:       4063228           0     4063228
+Total:      7980804     1208296     5408100
+
+4. ~$ lscpu | grep "CPU(s)"
+CPU(s):                4
+On-line CPU(s) list:   0-3
+NUMA node0 CPU(s):     0-3
+
+5. ~/Pictures$ find | grep .jpg
+./Screenshot from 2016-11-26 16-52-26.jpg
+./Screenshot from 2016-11-26 23-37-41.jpg
+
