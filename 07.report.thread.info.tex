@@ -1,0 +1,9 @@
+1. 	$ ps -e | grep "firefox"
+ 4191 ?        00:00:55 firefox-trunk
+	$ ps -o nlwp 4191
+ NLWP
+  55
+
+2. $ ls /proc/4191/task | wc -l
+55
+
