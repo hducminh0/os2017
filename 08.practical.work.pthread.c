@@ -14,7 +14,6 @@ item buffer[BUFFER_SIZE];
 int first = 0;
 int last = 0;
 
-//Thread function to run 'produce' on a different thread
 void produce(item *i) {
 	while ((first + 1) % BUFFER_SIZE == last) {
 	// do nothing -- no free buffer item
@@ -33,9 +32,10 @@ item* consume() {
 	return i;
 }
 
+//Thread function to run 'produce'
 void *produce_thread(){
 	item it[3];
-	//declare items
+	//declare the items
 	it[0].type = '1';
 	it[0].amount = 2;
 	it[0].unit = '1';
@@ -47,6 +47,7 @@ void *produce_thread(){
 	it[2].type = '1';
 	it[2].amount = 5;
 	it[2].unit = '0';
+	//produce the items
 	for (int i = 0; i < 3; ++i)
 	{
 		produce(&it[i]);
@@ -54,8 +55,10 @@ void *produce_thread(){
 	}
 }
 
+//Thread function to run 'consume'
 void *consume_thread(){
 	item *consumed_item;
+	//consume the items
 	for (int i = 0; i < 3; ++i)
 	{
 		consumed_item = consume();
@@ -65,15 +68,12 @@ void *consume_thread(){
 
 int main()
 {
-	// create a background thread to execute threadFunction
 	pthread_t tid, tid2;
-	printf("Before consume:\n");
-	printf("first = %d, last = %d\n", first, last);
-	pthread_create(&tid, NULL, produce_thread, NULL);
-	printf("\nThread ID for produce_thread: %ld\n", tid);
-	// pthread_join(tid, NULL);
-	pthread_create(&tid2, NULL, consume_thread, NULL);
-	printf("\nThread ID for consume_thread: %ld\n", tid2);
-	pthread_join(tid2, NULL);
+	printf("Before consume: first = %d, last = %d\n", first, last); 
+	pthread_create(&tid, NULL, produce_thread, NULL);		//create thread for producer
+	printf("\nThread ID for produce_thread: %ld\n", tid);	//print out the Thread ID for producer
+	pthread_create(&tid2, NULL, consume_thread, NULL);		//create thread for consumer
+	printf("\nThread ID for consume_thread: %ld\n", tid2);	//print out the Thread ID for consumer 
+	pthread_join(tid2, NULL);		//wait for thread to finish
 	return 0;
 }
