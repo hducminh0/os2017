@@ -25,7 +25,7 @@
                                           Time                                                                                 Time
 
        
-       SRTF: Average waiting time: 1.025ms                                                   RR: Average waiting time: 0.825ms
+       SRTF: Average waiting time: 3.775ms                                                   RR: Average waiting time: 6.825ms
              Average turnaround time: 8.275ms                                                    Average turnaround time: 11.325ms
        .-------------------------------.                                                    .-------------------------------.
        | P1: 0ms, 8ms                  |--------.                                           | P1: 0ms, 8ms                  |
@@ -52,7 +52,6 @@
          0.6ms
        ------------------------------------------------------------------------>            ------------------------------------------------------------------------>
                                           Time                                                                                 Time
-
 
 
 
