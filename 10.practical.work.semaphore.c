@@ -17,7 +17,7 @@ int last = 0;
 sem_t semaphore; //declare semaphore
 
 void produce(item *i) {
-	while ((first + 1) % BUFFER_SIZE == last) { //first=2, first+1=3%10=3
+	while ((first + 1) % BUFFER_SIZE == last) {
 	// do nothing -- no free buffer item
 	}
 	sem_wait(&semaphore);
